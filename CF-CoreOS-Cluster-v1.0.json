@@ -56,19 +56,19 @@
 
     "AllowSSHFrom" : {
       "Type" : "String",
-      "Description" : "The net block (CIDR) that SSH and docker are available to (default is Eduserv BRM).",
+      "Description" : "The net block (CIDR) from which SSH and docker on the master are available.",
       "Default" : ""
     },
 
     "KeyName" : {
       "Type" : "AWS::EC2::KeyPair::KeyName",
-      "Description" : "The name of an EC2 Key Pair to allow SSH access to the instance.",
+      "Description" : "The name of an EC2 Key Pair to allow SSH access to the master.",
       "Default" : ""
     },
 
     "VpcAvailabilityZones" : {
       "Type" : "CommaDelimitedList",
-      "Description" : "Comma-delimited list of three VPC availability zones in which to create subnets",
+      "Description" : "Comma-delimited list of three VPC availability zones in which nodes are created.",
       "Default" : "eu-west-1a,eu-west-1b,eu-west-1c"
     }
   },
