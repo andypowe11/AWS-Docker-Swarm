@@ -475,12 +475,8 @@
 
   "Outputs" : {
     "MasterDockerPs" : {
-      "Description" : "Docker ps on the cluster master",
+      "Description" : "Command to run a 'docker ps' on the cluster master",
       "Value" : { "Fn::Join" : [ "", [ "docker -H tcp://", { "Fn::GetAtt" : [ "MasterCoreOSInstance", "PublicIp" ] }, ":2375 ps" ] ] }
-    },
-    "MasterSsh" : {
-      "Description" : "SSH to the cluster master",
-      "Value" : { "Fn::Join" : [ "", [ "ssh -i ~/.ssh/eduserv-dev-ap.pem core@", { "Fn::GetAtt" : [ "MasterCoreOSInstance", "PublicIp" ] } ] ] }
     },
     "MasterPublicIP" : {
       "Description" : "Public IP for the cluster master",
