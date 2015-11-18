@@ -2,6 +2,9 @@
 CloudFormation template to build a CoreOS-based Docker swarm on AWS.
 ## Parameters
 The CloudFormation template takes the following parameters:
+
+| Parameter | Description |
+|-----------|-------------|
 | InstanceType | EC2 HVM instance type (t2.micro, m3.medium, etc). |
 | ClusterSize | Number of nodes in the CoreOS cluster (3-12). |
 | DiscoveryURL | A unique etcd cluster discovery URL. Grab a new token from https://discovery.etcd.io/new?size=4 |
