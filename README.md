@@ -37,10 +37,10 @@ free for use by the 'docker-swarm' container on the master.
 Separate 'master' and 'node' security groups control access between the nodes.
 The template builds the Swarm master first, then the auto-scaling group
 for the nodes
-(each of which needs to register with the master using the 'docker-swarm'
+(each of which needs to register with the master via its 'docker-swarm'
 container).
 
-Note that each host also runs the Fleet' service, which can be used as an
+Note that each host also runs the Fleet service, which can be used as an
 alternative cluster manager.
 
 ## Outputs
