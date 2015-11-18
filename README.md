@@ -16,14 +16,16 @@ The CloudFormation template takes the following parameters:
 | KeyName | The name of an EC2 Key Pair to allow SSH access to the instance. |
 | VpcAvailabilityZones | Comma-delimited list of three VPC availability zones in which to create subnets |
 
-- The template builds a single master node and a cluster of between 3 and 12 nodes.
-- All nodes form part of an initial etcd cluster for node discovery during bootstrapping.
-- Nodes are distributed across 3 availability zones.
+The template builds a single master node and a cluster of between 3 and 12 nodes.
+
+All nodes form part of an initial etcd cluster for node discovery during bootstrapping.
+
+Nodes are distributed across 3 availability zones.
 
 ## Outputs
 
 | Output | Description |
-+--------+-------------+
+|--------|-------------|
 | MasterDockerPs | Command to run a 'docker ps' on the cluster master |
 | MasterPublicIP | Public IP for the cluster master |
 | MasterPrivateIP | Private IP for the cluster master |
