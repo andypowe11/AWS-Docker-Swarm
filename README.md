@@ -1,6 +1,7 @@
 # AWS Docker cluster using Swarm
 
-A CloudFormation template to build a CoreOS-based Docker swarm on AWS.
+A CloudFormation template to build a CoreOS-based Docker cluster on AWS
+using Swarm.
 
 ## Parameters
 
@@ -13,7 +14,7 @@ Swarm master and node hosts. |
 | ClusterSize | Number of nodes in the Swarm cluster (3-12). |
 | DiscoveryURL | A unique etcd cluster discovery URL. Grab a new token from https://discovery.etcd.io/new?size=4 |
 | AdvertisedIPAddress | Use 'private' if your etcd cluster is within one region or 'public' if it spans regions or cloud providers. |
-| AllowSSHFrom | The net block (CIDR) from which SSH and docker on the Swarm master are available. |
+| AllowSSHFrom | The net block (CIDR) from which you can use SSH and docker to communicate with the Swarm master. |
 | KeyName | The name of an EC2 Key Pair to allow SSH access to the Swarm master. |
 | VpcAvailabilityZones | Comma-delimited list of three VPC availability zones in which to create subnets. |
 
