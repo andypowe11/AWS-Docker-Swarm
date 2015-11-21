@@ -51,3 +51,23 @@ alternative cluster manager.
 | MasterDockerPs | Command to run a 'docker ps' on the Swarm master |
 | MasterPublicIP | Public IP for the cluster master |
 | MasterPrivateIP | Private IP for the cluster master |
+
+## Testing
+
+Try
+
+    docker -H tcp://_MasterPublicIP_:2375 info
+    docker -H tcp://_MasterPublicIP_:2375 run docker/whalesay cowsay 'It works!'
+
+to see if the cluster is working.
+
+For debugging, you should be able to ssh to the master, using the username 'core' and your private key.
+You can ssh on from there to each of the nodes. Other than that, it shouldn't really be necessary to
+log in to any of the hosts.
+
+## Future work
+
+* Persistent storge - no, there isn't any currently!
+* Hybrid swarms - building a cluster across vCloud Director / vCloud Air and AWS. 
+See https://github.com/andypowe11/vCloudDirector-Docker-Swarm for a vca-cli script to build
+the equivalent cluster on vCloud Director or vCloud Air.
