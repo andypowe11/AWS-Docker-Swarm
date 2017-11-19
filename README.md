@@ -9,8 +9,7 @@ The CloudFormation template takes the following parameters:
 
 | Parameter | Description |
 |-----------|-------------|
-| InstanceType | EC2 HVM instance type (t2.micro, m3.medium, etc.) for the
-Swarm master and node hosts. |
+| InstanceType | EC2 HVM instance type (t2.micro, m3.medium, etc.) for the Swarm master and node hosts. |
 | ClusterSize | Number of nodes in the Swarm cluster (3-12). |
 | DiscoveryURL | A unique etcd cluster discovery URL. Grab a new token from https://discovery.etcd.io/new?size=4 |
 | AdvertisedIPAddress | Use 'private' if your etcd cluster is within one region or 'public' if it spans regions or cloud providers. |
@@ -68,6 +67,6 @@ log in to any of the hosts.
 ## Future work
 
 * Persistent storge - no, there isn't any currently!
-* Hybrid swarms - building a cluster across vCloud Director / vCloud Air and AWS. 
+* Hybrid swarms - building a cluster across vCloud Director / vCloud Air and AWS.
 See https://github.com/andypowe11/vCloudDirector-Docker-Swarm for a vca-cli script to build
 the equivalent cluster on vCloud Director or vCloud Air.
