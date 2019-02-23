@@ -85,121 +85,72 @@ Mappings:
       pubsubnet3: 10.203.2.0/24
   RegionMap:
     ap-northeast-1:
-      AMI: ami-8f65c4e9
+      AMI: ami-0674bd656e5bbd940
     ap-northeast-2:
-      AMI: ami-5901a437
+      AMI:	ami-0dedec04918e56116
     ap-south-1:
-      AMI: ami-8ad89ae5
+      AMI: ami-0bdbad103cc31c037
     ap-southeast-1:
-      AMI: ami-64f1b007
+      AMI: ami-0e11019a200802b43
     ap-southeast-2:
-      AMI: ami-6e89660c
+      AMI: ami-094bde83db4642610
     ca-central-1:
-      AMI: ami-91853df5
+      AMI: ami-0c119337e0f202885
     cn-north-1:
-      AMI: ami-d727f4ba
+      AMI: ami-001e6f29a899df749
+    cn-northwest-1:
+      AMI: ami-00a0d2ef649391775
     eu-central-1:
-      AMI: ami-ea53e885
+      AMI: ami-00946a0f23931daac
     eu-west-1:
-      AMI: ami-bbaf0ac2
+      AMI: ami-0cdf1816f4d8d634e
     eu-west-2:
-      AMI: ami-c3978aa7
+      AMI: ami-0bf0bc4adb43e8fc7
+    eu-west-3:
+      AMI: ami-0a931bb3434fe57f0
     sa-east-1:
-      AMI: ami-181c6474
+      AMI: ami-0c33cc9b83b72fae6
     us-east-1:
-      AMI: ami-a89d3ad2
+      AMI: ami-0089347d530e1f3e6
     us-east-2:
-      AMI: ami-1c81ad79
+      AMI: ami-0b15c21563ba827f2
     us-gov-west-1:
-      AMI: ami-644dc005
+      AMI: ami-c45638a5
     us-west-1:
-      AMI: ami-23566a43
+      AMI: ami-09e198d9d9ef8052b
     us-west-2:
-      AMI: ami-7c488704
+      AMI: ami-0b0f4f5f0c8c1a797
 Parameters:
   InstanceType:
     Type: String
     Description: EC2 HVM instance type (t2.micro, m3.medium, etc).
     AllowedValues:
-    - t2.nano
-    - t2.micro
-    - t2.small
-    - t2.medium
-    - t2.large
-    - t2.xlarge
-    - t2.2xlarge
-    - m3.medium
-    - m3.large
-    - m3.xlarge
-    - m3.2xlarge
-    - m4.large
-    - m4.xlarge
-    - m4.2xlarge
-    - m4.4xlarge
-    - m4.10xlarge
-    - m4.16xlarge
-    - c3.large
-    - c3.xlarge
-    - c3.2xlarge
-    - c3.4xlarge
-    - c3.8xlarge
-    - c4.large
-    - c4.xlarge
-    - c4.2xlarge
-    - c4.4xlarge
-    - c4.8xlarge
     - c5.large
     - c5.xlarge
     - c5.2xlarge
     - c5.4xlarge
     - c5.9xlarge
     - c5.18xlarge
-    - r3.large
-    - r3.xlarge
-    - r3.2xlarge
-    - r3.4xlarge
-    - r3.8xlarge
+    - t3.nano
+    - t3.micro
+    - t3.small
+    - t3.medium
+    - t3.large
+    - t3.xlarge
+    - t3.2xlarge
     - r4.large
     - r4.xlarge
     - r4.2xlarge
     - r4.4xlarge
     - r4.8xlarge
     - r4.16xlarge
-    - x1.16xlarge
-    - x1.32xlarge
-    - x1e.xlarge
-    - x1e.2xlarge
-    - x1e.4xlarge
-    - x1e.8xlarge
-    - x1e.16xlarge
-    - x1e.32xlarge
-    - d2.xlarge
-    - d2.2xlarge
-    - d2.4xlarge
-    - d2.8xlarge
-    - i2.xlarge
-    - i2.2xlarge
-    - i2.4xlarge
-    - i2.8xlarge
-    - i3.large
-    - i3.xlarge
-    - i3.2xlarge
-    - i3.4xlarge
-    - i3.8xlarge
-    - i3.16xlarge
-    - f1.2xlarge
-    - f1.16xlarge
-    - g2.2xlarge
-    - g2.8xlarge
-    - g3.4xlarge
-    - g3.8xlarge
-    - g3.16xlarge
-    - p2.xlarge
-    - p2.8xlarge
-    - p2.16xlarge
-    - p3.2xlarge
-    - p3.8xlarge
-    - p3.16xlarge
+    - m5.large
+    - m5.xlarge
+    - m5.2xlarge
+    - m5.4xlarge
+    - m5.12xlarge
+    - m5.24xlarge
+    - m5.metal
     ConstraintDescription: Must be a valid EC2 HVM instance type.
     Default: t2.micro
   ClusterSize:
