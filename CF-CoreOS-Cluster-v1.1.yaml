@@ -87,7 +87,7 @@ Mappings:
     ap-northeast-1:
       AMI: ami-0674bd656e5bbd940
     ap-northeast-2:
-      AMI:	ami-0dedec04918e56116
+      AMI: ami-0dedec04918e56116
     ap-south-1:
       AMI: ami-0bdbad103cc31c037
     ap-southeast-1:
@@ -152,7 +152,7 @@ Parameters:
     - m5.24xlarge
     - m5.metal
     ConstraintDescription: Must be a valid EC2 HVM instance type.
-    Default: t2.micro
+    Default: t3.micro
   ClusterSize:
     Type: Number
     Default: "3"
